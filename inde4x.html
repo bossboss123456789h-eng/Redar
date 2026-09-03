@@ -1,116 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>فهد سنك | FAHAD SYNC FITNESS PRO</title>
-    <meta name="description" content="نظام متكامل لتتبع الحمل التدريبي والتطور">
-    <meta name="theme-color" content="#0f172a">
-    <style>
-        :root {
-            --bg: #0a0e17;
-            --card: #131a2b;
-            --card2: #1a2338;
-            --card3: #223047;
-            --text: #f1f5f9;
-            --text-secondary: #8b98a9;
-            --text-muted: #64748b;
-            --accent: #00ff88;
-            --accent-hover: #00cc6a;
-            --accent-dark: #00994d;
-            --danger: #ff4757;
-            --warning: #ffa502;
-            --blue: #00d2ff;
-            --purple: #a855f7;
-            --pink: #ff6b9d;
-            --gold: #ffd700;
-            --border: #233045;
-            --border-light: #334155;
-            --shadow: 0 4px 20px rgba(0,0,0,0.3);
-            --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
-            --shadow-glow: 0 0 30px rgba(0,255,136,0.3);
-            --radius: 20px;
-            --radius-sm: 12px;
-            --radius-lg: 28px;
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --font: 'Segoe UI', Tahoma, sans-serif;
-            --sidebar-width: 280px;
-            --nav-height: 70px;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="فهد سنيك - FAHAD SYNC FITNESS">
+<meta name="copyright" content="© 2026 فهد سنيك - FAHAD SYNC FITNESS">
+<title>فهد سنيك | FAHAD SYNC FITNESS</title>
+<style>
+:root{--bg:#07111f;--card:#101c2e;--card2:#152640;--txt:#f6f8fc;--muted:#9eacc2;--line:#263751;--a:#39e69b;--bad:#ff6877}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,Tahoma,Arial;line-height:1.5}.app{max-width:1200px;margin:auto;padding:12px 12px 70px}
+header{position:sticky;top:0;z-index:5;background:#07111fee;backdrop-filter:blur(14px);padding:8px 0 12px;border-bottom:1px solid var(--line)}
+.brand{display:flex;justify-content:space-between;align-items:center}.brand h1{margin:0;font-size:22px}.brand small{color:var(--muted)}
+nav{display:flex;gap:6px;overflow:auto;margin-top:10px}button{border:0;border-radius:12px;padding:10px 13px;background:var(--card2);color:var(--txt);cursor:pointer}button.primary{background:var(--a);color:#03140d;font-weight:800}button.danger{background:#4b2029;color:#ffb5be}button.ghost{background:transparent;border:1px solid var(--line)}nav button.active{background:var(--a);color:#03140d;font-weight:800}
+.page{display:none;padding-top:16px}.page.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:13px}.c12{grid-column:span 12}.c8{grid-column:span 8}.c6{grid-column:span 6}.c4{grid-column:span 4}
+.card{background:linear-gradient(145deg,var(--card),#0c1727);border:1px solid var(--line);border-radius:19px;padding:15px;box-shadow:0 15px 40px #0004}h2{margin:0 0 10px;font-size:22px}h3{margin:0 0 10px}.muted{color:var(--muted)}.tiny{font-size:12px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.between{justify-content:space-between}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.kpi{background:#0a1627;border:1px solid var(--line);border-radius:14px;padding:12px}.num{font-size:26px;font-weight:900}
+input,select,textarea{width:100%;background:#091526;border:1px solid var(--line);border-radius:11px;color:var(--txt);padding:10px;font:inherit}label{display:block;color:var(--muted);font-size:12px;margin:7px 0 4px}.form{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.progress{height:9px;background:#06101d;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:var(--a)}
+.days{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.day{padding:9px 5px;text-align:center;background:#0a1627;border:1px solid var(--line);border-radius:12px;cursor:pointer}.day.active{border-color:var(--a)}.day.done{background:#103226}.day.rest{opacity:.65}
+.ex{background:#0a1627;border:1px solid var(--line);border-radius:15px;padding:12px;margin:8px 0}.sets{display:grid;grid-template-columns:32px 1fr 1fr 44px;gap:6px;align-items:end}.setn{text-align:center;color:var(--muted);padding-bottom:10px}
+.timer{text-align:center;font-size:44px;font-weight:900}.result{font-size:26px;font-weight:900;text-align:center;margin-top:8px}
+video,img{width:100%;border-radius:14px;background:#020812;max-height:330px;object-fit:cover}.photo{display:none}canvas{display:none}
+.badge{display:inline-block;padding:7px 10px;background:#17283f;border:1px solid var(--line);border-radius:99px;margin:3px;font-size:12px}table{width:100%;border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid var(--line);font-size:13px;text-align:right}
+footer{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
+@media(max-width:800px){.c8,.c6,.c4{grid-column:span 12}.kpis{grid-template-columns:repeat(2,1fr)}.days{grid-template-columns:repeat(5,1fr)}}@media(max-width:450px){.days{grid-template-columns:repeat(4,1fr)}.form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="brand"><div><h1>⚡ فهد سنيك</h1><small>FAHAD SYNC FITNESS — تمرّن • سجّل • تطوّر</small></div><button onclick="theme()">🌓</button></div>
+<nav id="nav"><button class="active" data-p="home">الرئيسية</button><button data-p="workout">التمرين</button><button data-p="library">التمارين</button><button data-p="food">السعرات 📷</button><button data-p="progress">التقدم</button><button data-p="body">الجسم</button><button data-p="profile">حسابي</button></nav></header>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<section id="home" class="page active"><div class="grid">
+<div class="c8"><div class="card"><h2>هلا <span id="hello">فهد</span> 🔥</h2><p class="muted">برنامج 30 يوم مع بيت، جيم، أوزان حرة، وزن جسم، مقاومة وكارديو.</p>
+<div class="kpis"><div class="kpi"><div class="num" id="xp">0</div><small>XP</small></div><div class="kpi"><div class="num" id="sess">0</div><small>جلسات</small></div><div class="kpi"><div class="num" id="streak">0</div><small>سلسلة</small></div><div class="kpi"><div class="num" id="water">0</div><small>مل ماء</small></div></div><hr>
+<div class="between row"><b>اليوم <span id="dayNo">1</span>/30</b><span class="muted" id="dayTitle"></span></div><div class="progress"><i id="cycle"></i></div>
+<div class="row" style="margin-top:10px"><button class="primary" onclick="go('workout')">ابدأ التمرين 💪</button><button onclick="completeDay()">إنجاز اليوم ✅</button></div></div></div>
+<div class="c4"><div class="card"><h3>النمط</h3><select id="mode" onchange="saveMode()"><option value="gym">🏋️ جيم</option><option value="home">🏠 بيت</option><option value="free">🛠️ أوزان حرة</option><option value="body">🤸 وزن جسم</option><option value="cardio">🏃 كارديو</option><option value="resistance">🟣 مقاومة</option></select>
+<label>الوحدة</label><select id="unit" onchange="saveUnit()"><option value="kg">KG</option><option value="lb">LB</option></select><hr><h3>💧 الماء</h3><div class="row"><button onclick="waterAdd(250)">+250</button><button onclick="waterAdd(500)">+500</button><button onclick="waterAdd(-250)">-250</button></div></div></div>
+<div class="c12"><div class="card"><div class="between row"><h3>📅 دورة 30 يوم</h3><span class="tiny muted">اضغط على اليوم</span></div><div id="days" class="days"></div></div></div>
+<div class="c12"><div class="card"><h3>🏆 إنجازات</h3><div id="badges"></div></div></div>
+</div></section>
 
-        body {
-            font-family: var(--font);
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 210, 255, 0.05) 0%, transparent 50%),
-                var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+<section id="workout" class="page"><div class="grid"><div class="c8"><div class="card"><div class="between row"><div><h2 id="wtitle">تمرين اليوم</h2><span class="muted" id="wmeta"></span></div><button onclick="finishWorkout()" class="primary">حفظ وإنهاء ✅</button></div><div id="exlist"></div><button onclick="addEx()" class="ghost">+ إضافة تمرين</button></div></div>
+<div class="c4"><div class="card"><h3>⏱️ مؤقت الراحة</h3><div id="timer" class="timer">01:30</div><div class="row"><button onclick="rest(30)">30ث</button><button onclick="rest(60)">60ث</button><button onclick="rest(90)">90ث</button><button onclick="rest(120)">120ث</button></div><hr><h3>🔥 سعرات التمرين</h3>
+<div class="form"><div><label>وزنك KG</label><input id="cw" type="number" value="70"></div><div><label>دقائق</label><input id="cd" type="number" value="60"></div></div><label>الشدة</label><select id="ci"><option value="4">خفيفة</option><option value="6" selected>متوسطة</option><option value="8">عالية</option><option value="10">شديدة</option></select><button class="primary" style="width:100%;margin-top:8px" onclick="workCal()">احسب</button><div id="cres" class="result">— kcal</div><p class="tiny muted">تقدير فقط، وليس قياساً طبياً.</p></div></div></div></section>
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg);
-            border-radius: 5px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--accent), var(--blue));
-            border-radius: 5px;
-            border: 2px solid var(--bg);
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
-        }
+<section id="library" class="page"><div class="card"><h2>📚 مكتبة التمارين</h2><div class="form"><input id="search" placeholder="ابحث..." oninput="library()"><select id="filter" onchange="library()"><option value="">الكل</option><option>جيم</option><option>بيت</option><option>أوزان حرة</option><option>وزن جسم</option><option>كارديو</option><option>مقاومة</option></select></div><div id="lib"></div></div></section>
 
-        /* App Layout */
-        .app {
-            display: flex;
-            min-height: 100vh;
-        }
+<section id="food" class="page"><div class="grid"><div class="c6"><div class="card"><h2>📷 كاميرا الوجبة</h2><p class="muted">الصورة للتسجيل والمراجعة. لا يوجد تعرّف ذكاء اصطناعي حقيقي داخل ملف HTML هذا؛ السعرات تُحسب من الطعام والكمية المختارين.</p><video id="cam" autoplay playsinline></video><canvas id="can"></canvas><img id="photo" class="photo"><div class="row" style="margin-top:8px"><button class="primary" onclick="cameraStart()">تشغيل</button><button onclick="snap()">📸 التقاط</button><button class="danger" onclick="cameraStop()">إيقاف</button></div><p id="cammsg" class="tiny muted"></p></div></div>
+<div class="c6"><div class="card"><h2>🍽️ إضافة وجبة</h2><label>الطعام</label><select id="foodsel" onchange="foodCalc()"></select><label>الحصص</label><input id="fq" type="number" value="1" min=".1" step=".1" oninput="foodCalc()"><div id="fcal" class="result">0 kcal</div><button class="primary" style="width:100%" onclick="mealAdd()">حفظ الوجبة</button><hr><h3>اليوم</h3><div id="meals"></div></div></div></div></section>
 
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: linear-gradient(180deg, var(--card), var(--card2));
-            border-left: 1px solid var(--border);
-            padding: 20px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100vh;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease;
-            box-shadow: var(--shadow);
-        }
+<section id="progress" class="page"><div class="grid"><div class="c12"><div class="card"><h2>📈 تقدمك</h2><div class="kpis"><div class="kpi"><div class="num" id="psess">0</div><small>جلسات</small></div><div class="kpi"><div class="num" id="pvol">0</div><small>حجم التدريب</small></div><div class="kpi"><div class="num" id="preps">0</div><small>تكرارات</small></div><div class="kpi"><div class="num" id="ppr">0</div><small>PRs</small></div></div><hr><div id="history"></div></div></div></div></section>
 
-        .sidebar-header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 20px;
-        }
+<section id="body" class="page"><div class="grid"><div class="c6"><div class="card"><h2>📏 قياسات الجسم</h2><div class="form"><div><label>الوزن KG</label><input id="bw" type="number"></div><div><label>الخصر CM</label><input id="waist" type="number"></div><div><label>الصدر CM</label><input id="chest" type="number"></div><div><label>الذراع CM</label><input id="arm" type="number"></div><div><label>الفخذ CM</label><input id="thigh" type="number"></div><div><label>نسبة الدهون %</label><input id="fat" type="number"></div></div><button class="primary" style="margin-top:10px" onclick="bodySave()">حفظ القياسات</button></div></div>
+<div class="c6"><div class="card"><h2>💧 هدف الماء</h2><label>هدفك اليومي ML</label><input id="waterGoal" type="number" value="2500" onchange="saveWaterGoal()"><div class="progress" style="margin-top:10px"><i id="waterbar"></i></div><p id="watertxt" class="muted"></p></div></div></div></section>
 
-        .sidebar-logo {
-            font-size: 32px;
-            margin-bottom: 10px;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
+<section id="profile" class="page"><div class="grid"><div class="c6"><div class="card"><h2>👤 حسابك</h2><label>الاسم</label><input id="name"><label>العمر</label><input id="age" type="number"><label>الطول CM</label><input id="height" type="number"><label>الهدف</label><select id="goal"><option>بناء عضل</option><option>خسارة دهون</option><option>لياقة عامة</option><option>قوة</option></select><button class="primary" style="margin-top:10px" onclick="profileSave()">حفظ</button></div></div>
+<div class="c6"><div class="card"><h2>💾 البيانات</h2><p class="muted">صدّر نسخة احتياطية أو استوردها على جهاز آخر.</p><div class="row"><button onclick="exportData()">تصدير JSON</button><label style="display:inline-block"><input id="imp" type="file" accept=".json" onchange="importData(this)" style="display:none"><button>استيراد JSON</button></label><button class="danger" onclick="resetAll()">مسح كل البيانات</button></div></div></div></div></section>
 
+<footer>© 2026 فهد سنيك - FAHAD SYNC FITNESS — جميع الحقوق محفوظة</footer>
+</div><div id="toast" style="position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#152640;border:1px solid var(--line);padding:10px 16px;border-radius:12px;display:none;z-index:20"></div>
+
+<script>
+const EX=[
+["بنش برس","صدر","جيم","بار","قوي"],["سكوات","أرجل","جيم","بار","قوي"],["ديدلفت","ظهر","أوزان حرة","بار","متقدم"],["ضغط دمبل","صدر","أوزان حرة","دمبل","متوسط"],["سحب علوي","ظهر","جيم","آلة","متوسط"],["باربل رو","ظهر","أوزان حرة","بار","متوسط"],["كتف دمبل","أكتاف","أوزان حرة","دمبل","متوسط"],["بايسبس كيرل","بايسبس","أوزان حرة","دمبل","سهل"],["ترايسبس كيبل","ترايسبس","جيم","كيبل","سهل"],["ليج برس","أرجل","جيم","آلة","متوسط"],["لانجز","أرجل","بيت","وزن جسم","متوسط"],["ضغط","صدر","وزن جسم","بدون","سهل"],["سكوات وزن جسم","أرجل","وزن جسم","بدون","سهل"],["بلانك","كور","بيت","بدون","سهل"],["كرنش","كور","بيت","بدون","سهل"],["ماونتن كلايمبرز","كارديو","بيت","بدون","متوسط"],["بيربي","كارديو","بيت","بدون","عالي"],["نط حبل","كارديو","كارديو","حبل","متوسط"],["مشي سريع","كارديو","كارديو","بدون","سهل"],["ركض","كارديو","كارديو","بدون","متوسط"],["روينغ","كارديو","جيم","آلة","عالي"],["رفرفة جانبية","أكتاف","أوزان حرة","دمبل","سهل"],["رفس خلفي ترايسبس","ترايسبس","أوزان حرة","دمبل","متوسط"],["هيب ثرست","أرجل","أوزان حرة","بار","متوسط"],["رومانيان ديدلفت","أرجل","أوزان حرة","دمبل","متوسط"],["فيس بول","أكتاف","جيم","كيبل","سهل"],["تجديف مطاط","ظهر","مقاومة","مطاط","متوسط"],["ضغط مطاط للصدر","صدر","مقاومة","مطاط","متوسط"],["بايسبس مطاط","بايسبس","مقاومة","مطاط","سهل"],["بلانك جانبي","كور","وزن جسم","بدون","متوسط"]
+];
+const FOODS=[["رز مطبوخ",205],["دجاج مشوي",165],["بيض",78],["موز",105],["تفاح",95],["شوفان",150],["خبز",80],["بطاطا",130],["تونة",140],["لبن",100],["لحم مشوي",250],["عدس",180]];
+const TIT=["انطلاقة القوة","صدر وترايسبس","ظهر وبايسبس","أرجل قوية","كارديو 🔥","أكتاف وكور","تعافي","Full Body","قوة حرة","حرق سعرات","صدر","ظهر","أرجل","أكتاف","كارديو","ذراع","كور","Full Body","قوة","تعافي","تحدي","تحمل","أوزان حرة","بيت","جيم","كارديو","Full Body","قوة","حرق","ختام الـ30 يوم"];
+let db=JSON.parse(localStorage.getItem("fahadSync")||"null")||{name:"فهد",mode:"gym",unit:"kg",day:1,done:[],sessions:[],xp:0,water:{},waterGoal:2500,meals:[],body:[],settings:{dark:true}};
+let workout=[],stream=null,timerInt=null,timerSec=90;
+
+function save(){localStorage.setItem("fahadSync",JSON.stringify(db));renderAll()}
+function toast(x){let t=document.getElementById("toast");t.textContent=x;t.style.display="block";setTimeout(()=>t.style.display="none",1800)}
+function go(p){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.getElementById(p).classList.add("active");document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.p===p));if(p==="workout")renderWorkout();if(p==="library")library();if(p==="progress")progress();if(p==="food")renderMeals()}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>go(b.dataset.p));
+function theme(){document.documentElement.style.setProperty("--bg",getComputedStyle(document.documentElement).getPropertyValue("--bg")==="#07111f"?"#f2f5f8":"#07111f");document.documentElement.style.setProperty("--txt",getComputedStyle(document.documentElement).getPropertyValue("--txt")==="#f6f8fc"?"#102033":"#f6f8fc");}
+function modeExercises(){let m=db.mode;return EX.filter(e=>m==="gym"||m==="free"?["جيم","أوزان حرة"].includes(e[2]):m==="home"?["بيت","وزن جسم","مقاومة"].includes(e[2]):m==="body"?e[2]==="وزن جسم":m==="cardio"?e[2]==="كارديو":e[2]==="مقاومة")}
+function makeWorkout(){let pool=modeExercises();let day=db.day;let picks=[];if(day%7===0){picks=[EX[13],EX[18],EX[19]]}else{let n=day%pool.length;for(let i=0;i<4;i++)picks.push(pool[(n+i*3)%pool.length])}return picks.map((e,i)=>({id:EX.indexOf(e),sets:3,reps:e[4]==="عالي"?"10":"10",weight:0,checked:false,setData:Array(3).fill(0).map(()=>({w:0,r:e[4]==="عالي"?10:10}))}))}
+function renderHome(){document.getElementById("hello").textContent=db.name;document.getElementById("xp").textContent=db.xp;document.getElementById("sess").textContent=db.sessions.length;document.getElementById("streak").textContent=streak();let dkey=new Date().toISOString().slice(0,10);document.getElementById("water").textContent=db.water[dkey]||0;document.getElementById("dayNo").textContent=db.day;document.getElementById("dayTitle").textContent=TIT[db.day-1];document.getElementById("cycle").style.width=(db.day/30*100)+"%";document.getElementById("mode").value=db.mode;document.getElementById("unit").value=db.unit;
+let ds="";for(let i=1;i<=30;i++)ds+=`<div class="day ${i===db.day?"active ":""}${db.done.includes(i)?"done ":""}${i%7===0?"rest":""}" onclick="pickDay(${i})"><b>${i}</b><small>${TIT[i-1]}</small></div>`;document.getElementById("days").innerHTML=ds;
+let badges=[];if(db.sessions.length>=1)badges.push("🥉 أول جلسة");if(db.sessions.length>=5)badges.push("🔥 5 جلسات");if(db.sessions.length>=10)badges.push("💪 10 جلسات");if(db.done.length>=30)badges.push("👑 ملك الـ30 يوم");if(db.xp>=1000)badges.push("⚡ 1000 XP");document.getElementById("badges").innerHTML=badges.length?badges.map(x=>`<span class=badge>${x}</span>`).join(""):"ابدأ أول تمرين حتى تظهر الإنجازات.";
+let wg=db.waterGoal;let val=db.water[dkey]||0;document.getElementById("waterbar").style.width=Math.min(100,val/wg*100)+"%";document.getElementById("watertxt").textContent=`${val} / ${wg} ML`;
+}
+function streak(){let n=0;for(let i=1;i<=30;i++)if(db.done.includes(db.day-i))n++;return n+(db.done.includes(db.day)?1:0)}
+function pickDay(i){db.day=i;workout=makeWorkout();save();go("workout")}
+function completeDay(){if(!db.done.includes(db.day))db.done.push(db.day);db.xp+=50;save();toast("تم تسجيل اليوم +50 XP")}
+function saveMode(){db.mode=document.getElementById("mode").value;workout=makeWorkout();save();toast("تم تغيير النمط")}
+function saveUnit(){db.unit=document.getElementById("unit").value;save()}
+function waterAdd(n){let k=new Date().toISOString().slice(0,10);db.water[k]=Math.max(0,(db.water[k]||0)+n);save()}
+function renderWorkout(){if(!workout.length)workout=makeWorkout();document.getElementById("wtitle").textContent=`اليوم ${db.day}: ${TIT[db.day-1]}`;document.getElementById("wmeta").textContent=`النمط: ${document.getElementById("mode").selectedOptions[0].text}`;let h="";workout.forEach((x,ei)=>{let e=EX[x.id];h+=`<div class=ex><div class=between row><b>${e[0]}</b><span class=muted>${e[1]} • ${e[3]} • ${e[4]}</span></div><div class=sets>${x.setData.map((s,si)=>`<span class=setn>${si+1}</span><div><label>الوزن ${db.unit}</label><input type=number value="${s.w}" onchange="setVal(${ei},${si},'w',this.value)"></div><div><label>التكرار</label><input type=number value="${s.r}" onchange="setVal(${ei},${si},'r',this.value)"></div><button class=danger onclick="delSet(${ei},${si})">×</button>`).join("")}</div><button class=ghost style="margin-top:7px" onclick="addSet(${ei})">+ ست</button></div>`});document.getElementById("exlist").innerHTML=h}
+function setVal(e,s,k,v){workout[e].setData[s][k]=+v}
+function addSet(e){workout[e].setData.push({w:workout[e].setData.at(-1)?.w||0,r:workout[e].setData.at(-1)?.r||10});renderWorkout()}
+function delSet(e,s){if(workout[e].setData.length>1)workout[e].setData.splice(s,1);renderWorkout()}
+function addEx(){let id=+prompt("رقم التمرين من مكتبة التمارين (1-"+EX.length+")");if(id>=1&&id<=EX.length)workout.push({id:id-1,setData:[{w:0,r:10},{w:0,r:10},{w:0,r:10}]});renderWorkout()}
+function finishWorkout(){let vol=0,reps=0;workout.forEach(x=>x.setData.forEach(s=>{vol+=s.w*s.r;reps+=s.r}));db.sessions.push({date:new Date().toISOString(),day:db.day,mode:db.mode,volume:vol,reps});db.xp+=100;completeDay();toast(`تم الحفظ +100 XP • حجم ${vol}`);go("home")}
+function rest(s){clearInterval(timerInt);timerSec=s;showTimer();timerInt=setInterval(()=>{timerSec--;showTimer();if(timerSec<=0){clearInterval(timerInt);toast("⏰ خلصت الراحة!");navigator.vibrate?.(300)}},1000)}
+function showTimer(){document.getElementById("timer").textContent=String(Math.floor(timerSec/60)).padStart(2,"0")+":"+String(timerSec%60).padStart(2,"0")}
+function workCal(){let w=+cw.value||70,d=+cd.value||60,i=+ci.value;let kcal=Math.round(i*w*d/60);cres.textContent=kcal+" kcal"}
+function library(){let q=(search.value||"").toLowerCase(),f=filter.value;lib.innerHTML=EX.map((e,i)=>({e,i})).filter(x=>(!q||x.e.join(" ").toLowerCase().includes(q))&&(!f||x.e[2]===f)).map(x=>`<div class=ex><div class=between row><b>${x.i+1}. ${x.e[0]}</b><span>${x.e[1]}</span></div><small class=muted>${x.e[2]} • ${x.e[3]} • ${x.e[4]}</small><br><button style="margin-top:7px" onclick="addFromLib(${x.i})">إضافة للتمرين</button></div>`).join("")}
+function addFromLib(i){if(!workout.length)workout=makeWorkout();workout.push({id:i,setData:[{w:0,r:10},{w:0,r:10},{w:0,r:10}]});toast("تمت الإضافة");go("workout")}
+function cameraStart(){navigator.mediaDevices?.getUserMedia({video:{facingMode:"environment"},audio:false}).then(s=>{stream=s;cam.srcObject=s;cammsg.textContent="الكاميرا تعمل — التقط صورة للوجبة."}).catch(e=>cammsg.textContent="تعذر فتح الكاميرا. استخدم الصفحة عبر HTTPS أو localhost، أو سجّل الوجبة يدوياً.")}
+function snap(){if(!stream)return toast("شغّل الكاميرا أولاً");can.width=cam.videoWidth;can.height=cam.videoHeight;can.getContext("2d").drawImage(cam,0,0);photo.src=can.toDataURL("image/jpeg",.8);photo.style.display="block";cammsg.textContent="تم التقاط الصورة. السعرات ما زالت تقديرية حسب اختيار الطعام."}
+function cameraStop(){stream?.getTracks().forEach(t=>t.stop());stream=null;cam.srcObject=null}
+function foodInit(){foodsel.innerHTML=FOODS.map((f,i)=>`<option value=${i}>${f[0]} — ${f[1]} kcal/حصة</option>`).join("");foodCalc()}
+function foodCalc(){let f=FOODS[+foodsel.value||0];fcal.textContent=Math.round(f[1]*(+fq.value||1))+" kcal"}
+function mealAdd(){let f=FOODS[+foodsel.value||0],q=+fq.value||1;db.meals.push({date:new Date().toISOString(),food:f[0],qty:q,kcal:Math.round(f[1]*q)});save();toast("تم حفظ الوجبة")}
+function renderMeals(){let d=new Date().toDateString(),m=db.meals.filter(x=>new Date(x.date).toDateString()===d),total=m.reduce((a,x)=>a+x.kcal,0);meals.innerHTML=`<b>المجموع: ${total} kcal</b>`+(m.length?m.map(x=>`<p>${x.food} × ${x.qty} = ${x.kcal} kcal</p>`).join(""):"<p class=muted>لا توجد وجبات مسجلة اليوم.</p>")}
+function progress(){let v=db.sessions.reduce((a,x)=>a+x.volume,0),r=db.sessions.reduce((a,x)=>a+x.reps,0);psess.textContent=db.sessions.length;pvol.textContent=v;preps.textContent=r;let prs={};db.sessions.forEach(s=>prs[s.day]=Math.max(prs[s.day]||0,s.volume));ppr.textContent=Object.keys(prs).length;history.innerHTML=db.sessions.slice().reverse().map(s=>`<p>📅 ${new Date(s.date).toLocaleDateString("ar-IQ")} — اليوم ${s.day} — ${s.reps} تكرار — حجم ${s.volume}</p>`).join("")||"<p class=muted>سجل أول تمرين لتظهر الإحصائيات.</p>"}
+function bodySave(){db.body.push({date:new Date().toISOString(),weight:+bw.value||0,waist:+waist.value||0,chest:+chest.value||0,arm:+arm.value||0,thigh:+thigh.value||0,fat:+fat.value||0});save();toast("تم حفظ القياسات")}
+function saveWaterGoal(){db.waterGoal=+waterGoal.value||2500;save()}
+function profileSave(){db.name=name.value||"فهد";db.age=+age.value||0;db.height=+height.value||0;db.goal=goal.value;save();toast("تم حفظ الحساب")}
+function exportData(){let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(db,null,2)],{type:"application/json"}));a.download="fahad-sync-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function importData(inp){let f=inp.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{db=JSON.parse(r.result);save();toast("تم الاستيراد")}catch{toast("الملف غير صالح")}};r.readAsText(f)}
+function resetAll(){if(confirm("متأكد؟ سيتم حذف كل بياناتك من هذا الجهاز.")){localStorage.removeItem("fahadSync");location.reload()}}
+function init(){name.value=db.name;age.value=db.age||"";height.value=db.height||"";goal.value=db.goal||"بناء عضل";waterGoal.value=db.waterGoal||2500;foodInit();renderHome();workout=makeWorkout()}
+function renderAll(){renderHome();if(document.getElementById("food").classList.contains("active"))renderMeals()}
+init();
+</script>
+</body></html>
         .sidebar-title {
             font-size: 18px;
             font-weight: 800;
